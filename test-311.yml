@@ -3,7 +3,6 @@ name: Test 3.11 without aiohttp extensions
 on:
   push:
     paths-ignore:
-      - "docs/**"
       - "*.md"
 
   pull_request:
@@ -29,7 +28,6 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
       matrix:
         python-version: ["3.11.0-rc - 3.11"]
         os: [ubuntu-latest, macOS-latest, windows-latest]
